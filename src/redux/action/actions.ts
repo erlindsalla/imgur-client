@@ -39,13 +39,10 @@ export const fetchDataAction = () => {
   ) => {
     const { filters } = getState();
 
-    // eslint-disable-next-line no-debugger
-    debugger;
     try {
       dispatch({ type: FETCH_DATA_REQUEST });
 
       const response = await fetchData(filters);
-      console.log(response.data, "----->");
       dispatch({
         type: FETCH_DATA_SUCCESS,
         payload: response.data,
