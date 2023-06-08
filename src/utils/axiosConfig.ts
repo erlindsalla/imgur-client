@@ -20,6 +20,10 @@ export const fetchData = async (
 ): Promise<AxiosResponse> => {
   const config: AxiosRequestConfig = {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*", // Allow all origins
+    },
     url: "/gallery",
     data: filter,
   };
