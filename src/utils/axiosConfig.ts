@@ -19,7 +19,7 @@ export const fetchData = async (
     url: "/gallery",
     data: filter,
   };
-
+  debugger;
   const response = await api(config);
   return response;
 };
